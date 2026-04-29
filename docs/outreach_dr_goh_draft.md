@@ -1,14 +1,16 @@
-# Draft Email: Dr. Goh Sim Kuan
+﻿# Dr. Goh Sim Kuan 套磁邮件草稿
 
-Status: placeholder created on 2026-04-29.
+状态：2026-04-29 创建中文辅助模板。
 
-Subject:
+正式邮件仍然建议用英文发；这个文件先保留中文说明，方便我每天修改。
+
+Subject：
 
 ```text
 Prospective undergraduate research assistant - reliable AI and model evaluation
 ```
 
-Draft:
+英文草稿：
 
 ```text
 Dear Dr. Goh,
@@ -23,9 +25,9 @@ Best regards,
 Wang Changkun
 ```
 
-TODO:
+发送前 待填：
 
-- [ ] Add GitHub link.
-- [ ] Add one-page CV link or attachment note.
-- [ ] Mention one concrete detail from NeuroMerging after reading the paper.
-- [ ] Mention one concrete project from Dr. Goh's FYP/project page.
+- [ ] 加 GitHub 链接。
+- [ ] 加一页 CV 链接或附件说明。
+- [ ] 读完 NeuroMerging 后，补一个具体技术细节。
+- [ ] 看 Dr. Goh 的 FYP/project page 后，补一个具体项目名。

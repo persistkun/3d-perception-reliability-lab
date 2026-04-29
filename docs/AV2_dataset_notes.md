@@ -1,46 +1,46 @@
-# AV2 Dataset Notes
+# AV2 数据集笔记
 
-Status: placeholder created on 2026-04-29.
+状态：2026-04-29 创建中文模板。
 
-Goal: document Argoverse 2 data layout, conversion assumptions, coordinate frames, class mapping, and evaluation artifacts used in the reliability project.
+目标：整理 Argoverse 2 的数据目录、转换假设、coordinate frame、class mapping，以及 reliability 项目用到的 evaluation artifacts。
 
-## Dataset Scope
+## Dataset 范围
 
-Current project: Argoverse 2 LiDAR 3D detection reliability audit.
+当前项目：Argoverse 2 LiDAR 3D detection reliability audit。
 
-Important split currently used:
+当前重要 split：
 
 ```text
 Full prepared validation, sample interval 1
 ```
 
-Selected baseline result:
+Selected baseline result：
 
 ```text
 VoxelNeXt epoch34 selected:
 mAP 0.1397, AvgR 0.1800, internal ECE 0.0624, Brier 0.1665, FPS 15.75
 ```
 
-## Items To Fill
+## 需要填写的内容
 
-- [ ] Raw AV2 directory layout.
-- [ ] OpenPCDet prepared data directory layout.
-- [ ] Info file names and sample counts.
-- [ ] Class list and class mapping.
-- [ ] Coordinate system notes.
-- [ ] Box convention notes.
-- [ ] Matching rule used by diagnostic scripts.
-- [ ] Difference between OpenPCDet internal ECE and diagnostic post-hoc ECE.
+- [ ] Raw AV2 directory layout。
+- [ ] OpenPCDet prepared data directory layout。
+- [ ] Info file 名称和 sample 数量。
+- [ ] Class list 和 class mapping。
+- [ ] Coordinate system notes。
+- [ ] Box convention notes。
+- [ ] Diagnostic scripts 使用的 matching rule。
+- [ ] OpenPCDet internal ECE 和 diagnostic post-hoc ECE 的区别。
 
 ## Diagnostic Matching Rule
 
-Current supplement notes:
+当前 supplement 中的设置：
 
-- score threshold: `> 0.3`
-- matching: 2m center-distance
-- assignment: class-consistent greedy matching
+- score threshold：`> 0.3`
+- matching：2m center-distance
+- assignment：class-consistent greedy matching
 
-## Common Failure Modes To Track
+## 常见 failure modes
 
 - far-range detections
 - vulnerable road users

@@ -1,26 +1,25 @@
-"""Calibration metric entry point for the 3D perception portfolio.
+﻿"""Calibration metrics 入口。
 
-This file is intentionally lightweight for now. The paper-grade calibration
-experiments currently live in `posthoc_calibration_search.py` and related WACV
-scripts. This module will become the clean portfolio-facing interface for ECE,
-Brier score, and reliability-diagram inputs.
+用途：以后把 ECE、Brier score、reliability diagram 的计算整理成一个干净、
+适合展示的脚本。当前 WACV 论文级实现仍在原论文仓库的
+`posthoc_calibration_search.py` 等脚本里。
 """
 
 from __future__ import annotations
 
 
 def expected_calibration_error() -> None:
-    """TODO: implement a clean saved-prediction ECE calculation."""
-    raise NotImplementedError("Fill during Stage 4: reliability analysis.")
+    """待填: 实现 saved prediction 上的 ECE 计算。"""
+    raise NotImplementedError("第 4 阶段填写：reliability analysis。")
 
 
 def brier_score() -> None:
-    """TODO: implement Brier score for matched detection outputs."""
-    raise NotImplementedError("Fill during Stage 4: reliability analysis.")
+    """待填: 实现 matched detection outputs 的 Brier score。"""
+    raise NotImplementedError("第 4 阶段填写：reliability analysis。")
 
 
 if __name__ == "__main__":
     print(
-        "Portfolio placeholder. See scripts/posthoc_calibration_search.py "
-        "for the current paper-grade calibration implementation."
+        "作品集占位脚本：当前论文级 calibration 实现在 "
+        "`posthoc_calibration_search.py`。"
     )

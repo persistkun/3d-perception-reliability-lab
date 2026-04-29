@@ -1,35 +1,35 @@
-# PointPillars Explained
+﻿# PointPillars 讲解稿
 
-Status: placeholder created on 2026-04-29.
+状态：2026-04-29 创建中文模板。
 
-Goal: produce a 3-minute explanation of PointPillars and connect it to OpenPCDet implementation details.
+目标：最后能用 3 分钟讲清 PointPillars，并把论文结构对应到 OpenPCDet 代码。
 
-## One-Sentence Summary
+## 一句话总结
 
-TODO.
+待填：用一句话说明 PointPillars 解决了什么问题。
 
-## Key Ideas
+## 核心概念
 
-- Pillarization:
-- Pillar Feature Net:
-- Pseudo-image:
-- BEV backbone:
-- Detection head:
-- NMS:
+- Pillarization：
+- Pillar Feature Net：
+- Pseudo-image：
+- BEV backbone：
+- Detection head：
+- NMS：
 
-## Why PointPillars Is Fast
+## 为什么 PointPillars 快
 
-TODO.
+待填。
 
 ## Pillar vs Voxel
 
-TODO.
+待填。
 
-## OpenPCDet Config Notes
+## OpenPCDet Config 笔记
 
-TODO: locate and annotate `pointpillar.yaml`.
+待填：找到并注释 `pointpillar.yaml`。
 
-## Failure Cases To Add
+## Failure Cases
 
 - [ ] far range
 - [ ] occlusion

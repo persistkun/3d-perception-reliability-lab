@@ -4,21 +4,21 @@
 
 Wang Changkun | XMUM AI Year 1
 
-## What I Can Do For A Lab
+## 我能为实验室做什么
 
-- Run and audit OpenPCDet 3D perception baselines on large-scale point-cloud datasets.
-- Process Argoverse 2 style LiDAR detection outputs and trace metrics back to saved artifacts.
-- Analyze detector reliability beyond mAP: calibration, Brier score, risk-coverage curves, runtime trade-offs, and subgroup failures.
-- Produce reproducible result tables, figures, paper notes, and failure-case visualizations.
-- Discuss the current shift from 3D detection to BEV, occupancy prediction, and world models.
+- 跑通并整理 OpenPCDet 3D perception baseline。
+- 处理 Argoverse 2 这类大规模点云数据和 LiDAR detection 输出。
+- 不只看 mAP，还能分析 detector reliability：calibration、Brier score、risk-coverage curve、runtime trade-off、subgroup failure。
+- 把实验结果整理成可复现的表格、图、论文笔记和失败案例分析。
+- 能讨论 3D detection 到 BEV、occupancy prediction、world model 的前沿趋势。
 
-## Current Project
+## 当前主项目
 
 **When Should a 3D Detector Doubt Itself? Calibration, Uncertainty, and Reliability on Argoverse 2**
 
-This repository is being organized into a research-assistant portfolio. The current strongest asset is an evidence-first reliability audit for LiDAR 3D detection on Argoverse 2 using an OpenPCDet / VoxelNeXt-style pipeline.
+这个仓库是我的 3D perception 科研助理作品集。当前最强的资产是一个基于 OpenPCDet / VoxelNeXt 风格 pipeline 的 Argoverse 2 LiDAR 3D detection reliability audit。
 
-## Current Results Snapshot
+## 当前结果快照
 
 | Model | Dataset / split | mAP | AvgR | Internal ECE | Brier | FPS |
 |---|---|---:|---:|---:|---:|---:|
@@ -27,33 +27,33 @@ This repository is being organized into a research-assistant portfolio. The curr
 | Low-LR SI=1 | AV2 full SI=1 validation | 0.1234 | 0.1515 | 0.0631 | 0.1535 | 16.42 |
 | MC-Dropout T=5 SI=1 | AV2 full SI=1 validation | 0.0897 | 0.1113 | 0.0452 | 0.1592 | 3.62 |
 
-Post-hoc diagnostic calibration reduces selected-baseline ECE from `0.1043` to `0.0078` with global affine-logit calibration and `0.0071` with classwise affine-logit calibration.
+Post-hoc diagnostic calibration 把 selected baseline 的 ECE 从 `0.1043` 降到 `0.0078`，classwise affine-logit calibration 可到 `0.0071`。
 
-## Sprint Map
+## 冲刺地图
 
-- [8-week sprint plan](SPRINT_8W_RESEARCH_ASSISTANT.md)
-- [Day 0 status](docs/SPRINT_DAY0_STATUS.md)
-- [OpenPCDet code map](docs/OpenPCDet_code_map.md)
-- [OpenPCDet commands](docs/OpenPCDet_commands.md)
-- [AV2 dataset notes](docs/AV2_dataset_notes.md)
-- [Reliability analysis notebook placeholder](notebooks/03_calibration_and_selective_risk.ipynb)
-- [BEV / occupancy / world model notes](docs/frontier_notes_occupancy_bev_worldmodel.md)
+- [8 周冲刺总计划](SPRINT_8W_RESEARCH_ASSISTANT.md)
+- [Day 0 初始盘点](docs/SPRINT_DAY0_STATUS.md)
+- [OpenPCDet 源码地图](docs/OpenPCDet_code_map.md)
+- [OpenPCDet 命令速查表](docs/OpenPCDet_commands.md)
+- [AV2 数据集笔记](docs/AV2_dataset_notes.md)
+- [Reliability analysis notebook 占位](notebooks/03_calibration_and_selective_risk.ipynb)
+- [BEV / occupancy / world model 前沿笔记](docs/frontier_notes_occupancy_bev_worldmodel.md)
 
-## Target Repository Structure
+## 仓库结构
 
 ```text
 3d-perception-reliability-lab/
-├── README.md
-├── docs/
-├── notebooks/
-├── scripts/
-├── paper-notes/
-└── figures/
+├── README.md              # GitHub 首页，放最能展示实力的成果
+├── docs/                  # 日常技术笔记和实验说明
+├── notebooks/             # 分析 notebook
+├── scripts/               # 可复用脚本
+├── paper-notes/           # 每篇论文一份笔记
+└── figures/               # 后续放图、GIF、结果可视化
 ```
 
-## Next Daily Outputs
+## 下一批每日产物
 
-- Fill `docs/OpenPCDet_code_map.md`.
-- Fill `docs/OpenPCDet_commands.md`.
-- Add the first clean visualization or qualitative montage to this README.
-- Draft a targeted email to Dr. Goh Sim Kuan using the reliable-AI positioning.
+- 填 `docs/OpenPCDet_code_map.md`。
+- 填 `docs/OpenPCDet_commands.md`。
+- 给 README 加第一张干净的 visualization 或 qualitative montage。
+- 读 Dr. Goh 的 NeuroMerging 后，完善套磁邮件草稿。

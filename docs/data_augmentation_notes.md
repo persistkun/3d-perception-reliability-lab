@@ -1,33 +1,33 @@
-# Data Augmentation Notes
+﻿# Data Augmentation 笔记
 
-Status: placeholder created on 2026-04-29.
+状态：2026-04-29 创建中文模板。
 
-Goal: document common point-cloud augmentation methods in OpenPCDet and record any custom experiments.
+目标：整理 OpenPCDet 里常见 point-cloud augmentation 方法，并记录自己的 custom experiment。
 
-## Standard Augmentations
+## 标准 Augmentations
 
-- GT sampling:
-- Random flip:
-- Random rotation:
-- Random scaling:
-- Translation / noise:
+- GT sampling：
+- Random flip：
+- Random rotation：
+- Random scaling：
+- Translation / noise：
 
-## OpenPCDet Paths
+## OpenPCDet 路径
 
-TODO.
+待填。
 
 ## Custom Gaussian Noise Experiment
 
-Status: not started.
+状态：未开始。
 
-Plan:
+计划：
 
-- [ ] Add Gaussian noise to point coordinates.
-- [ ] Insert into data processor or augmentor pipeline.
-- [ ] Run smoke test.
-- [ ] Compare mAP, calibration, and failure cases.
+- [ ] 给 point coordinates 加 Gaussian noise。
+- [ ] 插入 data processor 或 augmentor pipeline。
+- [ ] 跑 smoke test。
+- [ ] 比较 mAP、calibration、failure cases。
 
-## Results Log
+## 结果记录
 
-| Date | Augmentation | Dataset / split | Metric change | Notes |
+| 日期 | Augmentation | Dataset / split | Metric change | Notes |
 |---|---|---|---|---|

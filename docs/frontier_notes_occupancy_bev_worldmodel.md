@@ -1,33 +1,33 @@
-# Frontier Notes: BEV, Occupancy, and World Models
+﻿# 前沿笔记：BEV、Occupancy、World Models
 
-Status: placeholder created on 2026-04-29.
+状态：2026-04-29 创建中文模板。
 
-Goal: build enough front-line context to discuss why autonomous-driving perception is moving beyond object-level 3D detection.
+目标：建立自动驾驶感知前沿框架，能解释为什么行业从 object-level 3D detection 往 scene-level representation 走。
 
-## Core Mental Model
+## 核心理解框架
 
 ```text
 3D Detection
-  -> object-level boxes for predefined classes
+  -> 预测 predefined classes 的 object-level boxes
 
 BEV Perception
-  -> unified bird's-eye-view scene representation
+  -> 把多传感器信息统一到 bird's-eye-view 表示
 
 3D Occupancy Prediction
-  -> scene-level occupied/free/semantic voxel representation
+  -> 预测 scene-level occupied/free/semantic voxel
 
 4D / World Models
-  -> current scene plus future dynamics for planning and simulation
+  -> 不只看当前帧，还预测未来动态，用于 planning 和 simulation
 ```
 
-## Comparison Table
+## 对比表
 
-| Direction | Input | Output | Strength | Limitation |
+| 方向 | Input | Output | Strength | Limitation |
 |---|---|---|---|---|
-| 3D Detection | TODO | TODO | TODO | TODO |
-| BEV Perception | TODO | TODO | TODO | TODO |
-| 3D Occupancy | TODO | TODO | TODO | TODO |
-| World Model | TODO | TODO | TODO | TODO |
+| 3D Detection | 待填 | 待填 | 待填 | 待填 |
+| BEV Perception | 待填 | 待填 | 待填 | 待填 |
+| 3D Occupancy | 待填 | 待填 | 待填 | 待填 |
+| World Model | 待填 | 待填 | 待填 | 待填 |
 
 ## Paper Notes Checklist
 
@@ -38,8 +38,8 @@ BEV Perception
 - [ ] UniAD
 - [ ] SurroundOcc
 
-## One-Sentence Explanations
+## 一句话解释
 
-- BEVFusion: TODO.
-- TPVFormer: TODO.
-- UniAD: TODO.
+- BEVFusion：待填。
+- TPVFormer：待填。
+- UniAD：待填。

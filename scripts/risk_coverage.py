@@ -1,20 +1,19 @@
-"""Risk-coverage analysis entry point for the 3D perception portfolio.
+﻿"""Risk-coverage analysis 入口。
 
-The current paper-grade selective-risk implementation lives in
-`selective_risk_detection.py`. This file will become the compact educational
-version used by the GitHub portfolio and notebook.
+用途：以后把 selective risk / risk-coverage curve 做成一个干净的作品集脚本。
+当前 WACV 论文级实现仍在原论文仓库的 `selective_risk_detection.py`。
 """
 
 from __future__ import annotations
 
 
 def compute_risk_coverage_curve() -> None:
-    """TODO: implement risk-coverage calculation from saved detections."""
-    raise NotImplementedError("Fill during Stage 4: selective risk analysis.")
+    """待填: 从 saved detections 计算 risk-coverage curve。"""
+    raise NotImplementedError("第 4 阶段填写：selective risk analysis。")
 
 
 if __name__ == "__main__":
     print(
-        "Portfolio placeholder. See scripts/selective_risk_detection.py "
-        "for the current paper-grade selective-risk implementation."
+        "作品集占位脚本：当前论文级 selective-risk 实现在 "
+        "`selective_risk_detection.py`。"
     )

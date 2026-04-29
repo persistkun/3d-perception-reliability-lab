@@ -1,29 +1,29 @@
-# CenterPoint vs PointPillars
+﻿# CenterPoint vs PointPillars
 
-Status: placeholder created on 2026-04-29.
+状态：2026-04-29 创建中文模板。
 
-Goal: explain the difference between anchor-based and center-based 3D detection, then connect that difference to practical baseline work.
+目标：讲清 anchor-based 和 center-based 3D detection 的区别，并连接到实际 baseline 工作。
 
-## Quick Comparison
+## 快速对比
 
-| Aspect | PointPillars | CenterPoint |
+| 方面 | PointPillars | CenterPoint |
 |---|---|---|
-| Representation | TODO | TODO |
-| Detection style | TODO | TODO |
-| Main target | TODO | TODO |
-| Strength | TODO | TODO |
-| Weakness | TODO | TODO |
+| Representation | 待填 | 待填 |
+| Detection style | 待填 | 待填 |
+| Main target | 待填 | 待填 |
+| Strength | 待填 | 待填 |
+| Weakness | 待填 | 待填 |
 
 ## Anchor-Based vs Center-Based
 
-TODO.
+待填。
 
-## OpenPCDet Code Pointers
+## OpenPCDet 代码位置
 
-- PointPillars config: TODO
-- CenterPoint config: TODO
-- Center head implementation: TODO
+- PointPillars config：待填
+- CenterPoint config：待填
+- Center head implementation：待填
 
-## Interview Explanation
+## 面试 60 秒讲法
 
-TODO: write a 60-second explanation.
+待填：写一段可以直接说出口的解释。

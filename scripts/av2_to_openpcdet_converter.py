@@ -1,17 +1,16 @@
-"""AV2 to OpenPCDet conversion notes and future clean converter entry point.
+﻿"""AV2 to OpenPCDet conversion 入口。
 
-The current project already contains prepared AV2/OpenPCDet artifacts. This
-file is reserved for a portfolio-facing converter or a documented wrapper once
-the exact conversion path is cleaned for public presentation.
+用途：以后把 AV2 转 OpenPCDet 的流程整理成公开可读的 wrapper 或说明。
+当前 WACV 仓库已经有 prepared AV2/OpenPCDet artifacts，这里先作为作品集占位。
 """
 
 from __future__ import annotations
 
 
 def convert_av2_to_openpcdet() -> None:
-    """TODO: add public-safe conversion wrapper or documentation pointer."""
-    raise NotImplementedError("Fill during Stage 1: AV2 dataset notes.")
+    """待填: 添加 public-safe conversion wrapper 或文档指针。"""
+    raise NotImplementedError("第 1 阶段填写：AV2 dataset notes。")
 
 
 if __name__ == "__main__":
-    print("Portfolio placeholder for AV2 to OpenPCDet conversion.")
+    print("作品集占位脚本：后续用于 AV2 to OpenPCDet conversion。")

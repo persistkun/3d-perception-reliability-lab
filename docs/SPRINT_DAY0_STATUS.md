@@ -1,19 +1,19 @@
-# Sprint Day 0 Status
+# Sprint Day 0 初始盘点
 
-Date: 2026-04-29
+日期：2026-04-29
 
-This file records which parts of the 8-week sprint already exist in the current repository and which parts still need to be built into a clean portfolio.
+这个文件记录：8 周冲刺里哪些东西已经从 WACV/AV2 项目继承过来了，哪些还需要整理成干净的作品集材料。
 
-## Current Strong Assets
+## 当前已有的强资产
 
-The repository already contains a paper-grade reliability project:
+WACV 论文仓库里已经有一个 paper-grade reliability 项目：
 
 ```text
 When Should a 3D Detector Doubt Itself?
 Calibration, Uncertainty, and Reliability on Argoverse 2
 ```
 
-Current best detector-quality baseline from `WACV_PROJECT_MEMORY_DO_NOT_DRIFT.md`:
+当前最强 detector-quality baseline：
 
 | Model | Dataset / split | mAP | AvgR | Internal ECE | Brier | FPS |
 |---|---|---:|---:|---:|---:|---:|
@@ -22,7 +22,7 @@ Current best detector-quality baseline from `WACV_PROJECT_MEMORY_DO_NOT_DRIFT.md
 | Low-LR SI=1 | AV2 full SI=1 validation | 0.1234 | 0.1515 | 0.0631 | 0.1535 | 16.42 |
 | MC-Dropout T=5 SI=1 | AV2 full SI=1 validation | 0.0897 | 0.1113 | 0.0452 | 0.1592 | 3.62 |
 
-Post-hoc calibration result:
+Post-hoc calibration：
 
 | Setting | Diagnostic ECE |
 |---|---:|
@@ -30,15 +30,15 @@ Post-hoc calibration result:
 | Global affine-logit calibration | 0.0078 |
 | Classwise affine-logit calibration | 0.0071 |
 
-Key interpretation:
+关键理解：
 
-- MC-Dropout improves internal ECE but hurts detection quality and runtime.
-- Held-out score calibration preserves detections and gives the strongest reliability correction.
-- VRU and subgroup reliability remain important failure modes.
+- MC-Dropout 改善 internal ECE，但伤害 mAP 和 FPS。
+- Held-out score calibration 保留检测结果，同时给出最强 reliability correction。
+- VRU 和 subgroup reliability 是安全风险里不能被 global metrics 掩盖的部分。
 
-## Existing Scripts Relevant to Sprint
+## 和本冲刺相关的已有脚本
 
-Reliability and calibration:
+Reliability 和 calibration：
 
 - `scripts/posthoc_calibration_search.py`
 - `scripts/selective_risk_detection.py`
@@ -47,64 +47,56 @@ Reliability and calibration:
 - `scripts/generate_wacv_reliability_figures.py`
 - `scripts/generate_wacv_group_analysis.py`
 
-Paper and reproducibility:
+Paper 和 reproducibility：
 
 - `README_WACV_REPRODUCIBILITY.md`
 - `PAPER/PAPER_NUMBER_LINEAGE.md`
 - `scripts/check_paper_integrity.py`
 - `scripts/refresh_paper_artifacts.ps1`
 
-Qualitative visualization:
+Qualitative visualization：
 
 - `scripts/mine_qualitative_cases.py`
 - `scripts/make_qualitative_storyboard.py`
 - `scripts/make_qualitative_montage.py`
 - `figures/qualitative/`
 
-## Sprint Gaps
+## 当前缺口
 
-The current project is strong as a paper, but not yet packaged as a first-screen research-assistant portfolio.
+WACV 项目作为论文很强，但还没有被整理成“别人一眼看懂的科研助理作品集”。
 
-High-priority gaps:
+高优先级缺口：
 
-- [ ] A public-facing README with one clear positioning line, visual, and metrics table.
+- [ ] GitHub README 第一屏：一句定位、图、结果表。
 - [ ] `docs/OpenPCDet_code_map.md`
 - [ ] `docs/OpenPCDet_commands.md`
 - [ ] `docs/AV2_dataset_notes.md`
-- [ ] A clean visual demo GIF or compact montage for GitHub first screen.
-- [ ] A one-page CV bullet set.
-- [ ] A targeted email draft for Dr. Goh Sim Kuan.
-- [ ] A bridge note explaining how this AV2 reliability project maps to XMUM AI faculty interests.
+- [ ] 一个干净 visualization GIF 或 montage。
+- [ ] 一页 CV bullet。
+- [ ] Dr. Goh 套磁邮件。
+- [ ] 一份说明：AV2 reliability 项目如何连接 XMUM AI 老师方向。
 
-Lower-priority or optional gaps:
+低优先级或可选缺口：
 
-- [ ] nuScenes CenterPoint baseline if compute/time allows.
-- [ ] PointPillars reproduction if needed for broader baseline credibility.
-- [ ] TPVFormer or occupancy inference demo.
+- [ ] nuScenes CenterPoint baseline。
+- [ ] PointPillars reproduction。
+- [ ] TPVFormer 或 occupancy inference demo。
 
-## Updated Strategy
+## 更新后的策略
 
-Do not restart from scratch.
+不要从零开始。
 
-The sprint should now use a two-track strategy:
+现在采用两条线：
 
-1. Portfolio packaging:
-   Convert existing WACV/AV2 reliability work into a clean GitHub-facing research assistant portfolio.
+1. 作品集包装：把已有 WACV/AV2 reliability work 整理成 GitHub-facing portfolio。
+2. 能力拓宽：补 PointPillars、CenterPoint、BEV/Occupancy 笔记和可选 demo。
 
-2. Skill broadening:
-   Add PointPillars, CenterPoint, BEV/Occupancy notes, and optional demos only where they improve credibility for external labs.
-
-## Current Best Self-Introduction
-
-Use this version:
+## 当前最佳自我介绍
 
 > I am a first-year AI student at XMUM working on reliable 3D perception. I have built an Argoverse 2 / OpenPCDet reliability audit around VoxelNeXt, covering baseline evaluation, calibration, MC-Dropout uncertainty, selective risk detection, runtime trade-offs, and subgroup reliability. I can contribute to a lab by running baselines, processing point-cloud data, auditing detector failures, and turning saved detection outputs into reliability evidence.
 
-## Next Concrete Step
+## 下一步
 
-Create the first two portfolio docs:
-
-- `docs/OpenPCDet_commands.md`
-- `docs/OpenPCDet_code_map.md`
-
-Then create a README first-screen draft.
+- [ ] 填 `docs/OpenPCDet_commands.md`。
+- [ ] 填 `docs/OpenPCDet_code_map.md`。
+- [ ] 写 README 第一屏草稿。

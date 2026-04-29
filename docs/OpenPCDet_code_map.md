@@ -1,51 +1,51 @@
-# OpenPCDet Code Map
+﻿# OpenPCDet 源码地图
 
-Status: placeholder created on 2026-04-29.
+状态：2026-04-29 创建中文模板。
 
-Goal: make the OpenPCDet repository understandable enough that a professor, PhD student, or future self can see that I know where training, evaluation, datasets, models, and result artifacts live.
+目标：把 OpenPCDet 的结构整理到别人能看懂，也让自己以后快速回忆训练、评估、dataset、model、result artifact 都在哪里。
 
-## Repository Areas To Fill
+## 需要逐步填的区域
 
-| Area | Path | What I Need To Understand | Notes |
+| 区域 | 路径 | 我要弄懂什么 | 笔记 |
 |---|---|---|---|
-| Training entry | `OpenPCDet/tools/train.py` | Argument parsing, config loading, checkpoint saving, logging | TODO |
-| Evaluation entry | `OpenPCDet/tools/test.py` | Checkpoint loading, distributed eval, result saving | TODO |
-| Dataset config | `OpenPCDet/tools/cfgs/dataset_configs/` | Dataset root, class names, data processor, augmentor | TODO |
-| Model config | `OpenPCDet/tools/cfgs/` | Backbone, dense head, post-processing, NMS | TODO |
-| Dataset implementation | `OpenPCDet/pcdet/datasets/` | Info files, ground truth, prediction dicts | TODO |
-| Model implementation | `OpenPCDet/pcdet/models/` | Detector template, 3D backbones, dense heads | TODO |
-| Data augmentation | `OpenPCDet/pcdet/datasets/augmentor/` | GT sampling, flips, rotation, scaling | TODO |
-| Result artifacts | `OpenPCDet/output/` | Logs, TensorBoard, `result.pkl`, eval summaries | TODO |
+| 训练入口 | `OpenPCDet/tools/train.py` | 参数解析、config 加载、checkpoint 保存、logging | 待填 |
+| 评估入口 | `OpenPCDet/tools/test.py` | checkpoint 加载、distributed eval、result 保存 | 待填 |
+| Dataset config | `OpenPCDet/tools/cfgs/dataset_configs/` | dataset root、class names、data processor、augmentor | 待填 |
+| Model config | `OpenPCDet/tools/cfgs/` | backbone、dense head、post-processing、NMS | 待填 |
+| Dataset 实现 | `OpenPCDet/pcdet/datasets/` | info files、ground truth、prediction dicts | 待填 |
+| Model 实现 | `OpenPCDet/pcdet/models/` | detector template、3D backbones、dense heads | 待填 |
+| Data augmentation | `OpenPCDet/pcdet/datasets/augmentor/` | GT sampling、flip、rotation、scaling | 待填 |
+| Result artifacts | `OpenPCDet/output/` | logs、TensorBoard、`result.pkl`、eval summaries | 待填 |
 
-## Prediction Dictionary Checklist
+## Prediction Dictionary 检查清单
 
-For each saved prediction output, identify:
+每次读 saved prediction output 时，确认这些东西：
 
 - `pred_boxes`
 - `pred_scores`
 - `pred_labels`
-- frame or sample identifier
+- frame 或 sample identifier
 - coordinate frame
 - class mapping
 - post-processing threshold
 
-## Questions To Answer
+## 需要回答的问题
 
-- How does OpenPCDet convert model outputs into evaluator inputs?
-- Where is NMS applied?
-- Where are score thresholds applied?
-- How does the AV2 evaluator define mAP, AvgR, ECE, MCE, and Brier?
-- What exact path produced the current selected baseline result?
+- OpenPCDet 怎么把 model outputs 转成 evaluator inputs？
+- NMS 在哪里做？
+- score threshold 在哪里生效？
+- AV2 evaluator 怎么定义 mAP、AvgR、ECE、MCE、Brier？
+- 当前 selected baseline 是哪个路径产出的？
 
-## Current Known Baseline Artifact
+## 当前已知 baseline artifact
 
-Selected baseline:
+Selected baseline：
 
 ```text
 OpenPCDet/output/argo2_models/cbgs_voxel01_voxelnext/si1_baseline_epoch34_eval/eval/epoch_34/val/si1/result.pkl
 ```
 
-Metrics:
+Metrics：
 
 ```text
 mAP 0.1397, AvgR 0.1800, internal ECE 0.0624, Brier 0.1665, FPS 15.75

@@ -1,149 +1,151 @@
-# 8-Week Sprint: 3D Perception Research Assistant
+# 8 周冲刺：3D Perception Research Assistant
 
-Wang Changkun | XMUM AI Year 1 | Target window: August-September 2026 top labs
+Wang Changkun | XMUM AI Year 1 | 目标时间：2026 年 8-9 月联系顶尖实验室
 
-Core positioning:
+核心定位：
 
 > 3D Perception Baseline Engineer + Reliability Analyst
 
-Working rule for this thread:
+这个仓库从 2026-04-29 开始作为冲刺工作台使用。
 
-- This document is the active sprint memory from 2026-04-29 onward.
-- The goal is not passive learning. The goal is weekly deliverables that can be shown to professors, PhD students, and research labs.
-- Every workday should leave at least one artifact: code, figure, note, commit, result table, email draft, or reproducible command.
+## 总原则
 
-## Daily Template
+- 这不是“我在学习”的仓库，而是“我每天交付一点科研资产”的仓库。
+- 每天至少留下一个产物：代码、图、笔记、commit、实验表、邮件草稿、可复现命令都可以。
+- WACV 论文仓库继续放论文和实验原始资产；这个仓库只放对外展示、学习路线、作品集材料。
+- 技术名词保持英文，比如 OpenPCDet、CenterPoint、ECE、Brier score、risk-coverage。
 
-| Block | Time | Output |
+## 每天执行模板
+
+| 时间块 | 时间 | 当天产物 |
 |---|---:|---|
-| Paper / course | 1h | Notes or summary |
-| Code / experiment | 2h | Script, command, log, or result |
-| Notes / documentation | 1h | Markdown, table, or figure explanation |
-| GitHub / application material | 1h | Commit, README update, CV bullet, or email draft |
+| 论文 / 课程 | 1h | 论文笔记或概念总结 |
+| 代码 / 实验 | 2h | 脚本、命令、log、结果 |
+| 笔记 / 文档 | 1h | Markdown、表格、图说明 |
+| GitHub / 申请材料 | 1h | commit、README 更新、CV bullet、邮件草稿 |
 
-## Stage 1: Weeks 1-2, OpenPCDet Foundation
+## 第 1 阶段：第 1-2 周，OpenPCDet 地基
 
-Goal: become credible as someone who can run and audit OpenPCDet baselines.
+目标：让别人相信我是“会用 OpenPCDet 干活的人”。
 
-Key skills:
+要掌握：
 
-- OpenPCDet repo map: datasets, models, tools.
-- `tools/train.py` and `tools/test.py` CLI arguments.
-- Dataset config and model config fields.
-- Checkpoint loading and evaluation flow.
-- Prediction dictionaries: boxes, scores, labels.
-- AV2, nuScenes, and KITTI data layout.
-- Fast batch-size-1 smoke tests.
-- Logs, TensorBoard, W&B, and `result.pkl`.
+- OpenPCDet repo 结构：datasets、models、tools。
+- `tools/train.py` 和 `tools/test.py` 的参数。
+- Dataset config 和 model config 的关键字段。
+- checkpoint 加载和 evaluation 流程。
+- prediction dict 里的 boxes、scores、labels。
+- AV2、nuScenes、KITTI 的数据目录结构。
+- batch size 1 smoke test。
+- log、TensorBoard、W&B、`result.pkl` 怎么看。
 
-Tasks:
+任务：
 
-- [ ] Run CenterPoint on nuScenes or a small/smoke subset.
-- [ ] Add or document W&B logging for loss and mAP curves.
-- [ ] Document AV2 to OpenPCDet conversion and coordinate alignment.
-- [ ] Run or summarize AV2 CenterPoint baseline and competition-style output.
+- [ ] 跑通或整理 CenterPoint baseline。
+- [ ] 记录 W&B 或其他日志方式。
+- [ ] 整理 AV2 到 OpenPCDet 的转换和 coordinate alignment。
+- [ ] 整理 AV2 baseline 结果和输出路径。
 
-Deliverables:
+产出：
 
 - [ ] `docs/OpenPCDet_code_map.md`
 - [ ] `docs/OpenPCDet_commands.md`
 - [ ] `docs/AV2_dataset_notes.md`
-- [ ] Reproducible eval log screenshot or copied metrics table.
+- [ ] 一份可复现 eval log / 结果数字表。
 
-Acceptance:
+验收：
 
-- [ ] A CenterPoint baseline number exists.
-- [ ] The AV2 conversion path is documented and reproducible.
-- [ ] README or notes show exact commands and result paths.
+- [ ] 有一个清楚的 baseline 数字。
+- [ ] AV2 conversion 路径讲得清楚。
+- [ ] README 或 docs 里有精确命令和结果路径。
 
-## Stage 2: Week 3, PointPillars + Visualization
+## 第 2 阶段：第 3 周，PointPillars + Visualization
 
-Goal: explain PointPillars clearly and produce visual evidence for a research portfolio.
+目标：能 3 分钟讲清 PointPillars，并做出好看的点云可视化。
 
-Tasks:
+任务：
 
-- [ ] Read PointPillars Section 3 and Fig. 2.
-- [ ] Locate OpenPCDet `pointpillar.yaml` and annotate key fields.
-- [ ] Build an Open3D visualization script for 3D boxes over point clouds.
-- [ ] Generate GIF or MP4 for README.
-- [ ] Collect at least 3 failure cases: far range, occlusion, sparse points.
+- [ ] 读 PointPillars Section 3 和 Fig. 2。
+- [ ] 找到 OpenPCDet 的 `pointpillar.yaml` 并注释关键字段。
+- [ ] 写 Open3D visualization 脚本，把 3D boxes 叠到点云上。
+- [ ] 生成 GIF 或 MP4 放进 README。
+- [ ] 收集 3 个 failure cases：远距离、遮挡、稀疏点云。
 
-Deliverables:
+产出：
 
 - [ ] `docs/PointPillars_explained.md`
-- [ ] `figures/3d_visualization.gif` or MP4
-- [ ] Failure-case screenshots and explanations.
+- [ ] `figures/3d_visualization.gif` 或 MP4
+- [ ] failure case 截图和分析。
 
-Acceptance:
+验收：
 
-- [ ] Can explain why PointPillars is fast.
-- [ ] Can explain pillar vs voxel.
-- [ ] README first screen has a strong visualization.
+- [ ] 能解释为什么 PointPillars 快。
+- [ ] 能解释 pillar 和 voxel 的区别。
+- [ ] README 第一屏有视觉成果。
 
-## Stage 3: Week 4, CenterPoint + Data Augmentation
+## 第 3 阶段：第 4 周，CenterPoint + Data Augmentation
 
-Goal: move from running baselines to understanding detector design.
+目标：从“会跑 baseline”升级到“懂 detector 设计思路”。
 
-Tasks:
+任务：
 
-- [ ] Trace `center_head.py` and explain heatmap target generation.
-- [ ] Document anchor-based vs center-based detection.
-- [ ] Implement a simple Gaussian-noise point-cloud augmentation.
-- [ ] Plot AV2 class distribution.
-- [ ] Plot AV2 distance distribution.
+- [ ] 跟 `center_head.py`，理解 heatmap target 怎么生成。
+- [ ] 整理 anchor-based vs center-based detection。
+- [ ] 实现一个简单 Gaussian noise point-cloud augmentation。
+- [ ] 画 AV2 class distribution。
+- [ ] 画 AV2 distance distribution。
 
-Deliverables:
+产出：
 
 - [ ] `docs/CenterPoint_vs_PointPillars.md`
 - [ ] `docs/data_augmentation_notes.md`
 - [ ] `figures/class_distribution.png`
 - [ ] `figures/distance_distribution.png`
-- [ ] Commented or documented CenterPoint head notes.
 
-Acceptance:
+验收：
 
-- [ ] Can explain anchor-based vs center-based detection.
-- [ ] Augmentation pipeline runs.
-- [ ] W&B or logs show before/after comparison.
+- [ ] 能解释 anchor-based vs center-based。
+- [ ] augmentation pipeline 跑通。
+- [ ] 有 before/after 对比日志或图。
 
-## Stage 4: Week 5, Reliability Analysis
+## 第 4 阶段：第 5 周，Reliability Analysis
 
-Goal: turn the portfolio into a differentiated research contribution.
+目标：形成差异化能力。别人只会说 mAP，我要能说 detector 什么时候不可信。
 
-Core question:
+核心问题：
 
 > When does a 3D detector know that it should not be trusted?
 
-Tasks:
+任务：
 
-- [ ] Implement or clean `scripts/calibration_metrics.py`.
-- [ ] Implement or clean `scripts/risk_coverage.py`.
-- [ ] Prepare `notebooks/03_calibration_and_selective_risk.ipynb`.
-- [ ] Plot reliability diagram.
-- [ ] Plot risk-coverage curve.
-- [ ] Run subgroup analysis by class, distance, VRU, and small/long-tail objects.
+- [ ] 整理 `scripts/calibration_metrics.py`。
+- [ ] 整理 `scripts/risk_coverage.py`。
+- [ ] 完成 `notebooks/03_calibration_and_selective_risk.ipynb`。
+- [ ] 画 reliability diagram。
+- [ ] 画 risk-coverage curve。
+- [ ] 做 class、distance、VRU、小目标/long-tail subgroup analysis。
 
-Deliverables:
+产出：
 
 - [ ] `scripts/calibration_metrics.py`
 - [ ] `scripts/risk_coverage.py`
 - [ ] `notebooks/03_calibration_and_selective_risk.ipynb`
 - [ ] `figures/reliability_diagram.png`
 - [ ] `figures/risk_coverage_curve.png`
-- [ ] Grouped ECE/Brier table.
+- [ ] grouped ECE/Brier 表格。
 
-Acceptance:
+验收：
 
-- [ ] ECE and Brier scripts run from saved detection results.
-- [ ] Reliability diagram exists.
-- [ ] Risk-coverage curve exists.
-- [ ] Can explain why calibration matters beyond mAP.
+- [ ] ECE 和 Brier 脚本能从 saved detections 运行。
+- [ ] reliability diagram 存在。
+- [ ] risk-coverage curve 存在。
+- [ ] 能解释 calibration 为什么比单看 mAP 更接近真实部署风险。
 
-## Stage 5: Week 6, Frontier: Occupancy / BEV / World Model
+## 第 5 阶段：第 6 周，前沿视野：BEV / Occupancy / World Model
 
-Goal: be able to discuss current autonomous-driving perception trends.
+目标：顶尖实验室问前沿方向时不露怯。
 
-Reading list:
+阅读清单：
 
 - [ ] PointPillars
 - [ ] CenterPoint
@@ -155,106 +157,92 @@ Reading list:
 - [ ] SurroundOcc
 - [ ] Calibration: Guo et al.
 
-Tasks:
+任务：
 
-- [ ] Write 100-word notes for each core paper.
-- [ ] Run or document TPVFormer inference demo if feasible.
-- [ ] Run or document one 3D occupancy open-source inference demo if feasible.
-- [ ] Create a comparison table: Detection vs BEV vs Occupancy vs World Model.
+- [ ] 每篇核心论文写 100 字笔记。
+- [ ] 如果可行，跑一次 TPVFormer inference demo。
+- [ ] 如果可行，跑一次 3D occupancy inference demo。
+- [ ] 做 Detection vs BEV vs Occupancy vs World Model 对比表。
 
-Deliverables:
+产出：
 
 - [ ] `docs/frontier_notes_occupancy_bev_worldmodel.md`
 - [ ] `paper-notes/TPVFormer.md`
 - [ ] `paper-notes/BEVFusion.md`
 - [ ] `paper-notes/OccNet.md`
 - [ ] `paper-notes/UniAD.md`
-- [ ] TPVFormer or occupancy visualization screenshot.
+- [ ] TPVFormer 或 occupancy 可视化截图。
 
-Acceptance:
+验收：
 
-- [ ] Can explain TPVFormer, BEVFusion, and UniAD in one sentence each.
-- [ ] Can explain why perception is moving from 3D detection to occupancy.
+- [ ] 能一句话解释 TPVFormer、BEVFusion、UniAD。
+- [ ] 能解释为什么自动驾驶感知从 3D detection 走向 occupancy。
 
-## Stage 6: Week 7, GitHub Portfolio
+## 第 6 阶段：第 7 周，GitHub 作品集
 
-Goal: make the GitHub repository useful within 3 seconds.
+目标：让博士生点进 GitHub 3 秒内觉得这个学弟能干活。
 
-Target structure:
+README 第一屏必须有：
 
-```text
-3d-perception-reliability-lab/
-├── README.md
-├── docs/
-├── notebooks/
-├── scripts/
-├── paper-notes/
-└── figures/
-```
+- 清楚定位。
+- 关键 baseline metrics。
+- 可视化 GIF 或图。
+- 我能立刻为实验室做什么。
+- reliability analysis 和 paper notes 链接。
 
-README first screen must show:
+任务：
 
-- Strong visualization GIF.
-- Concrete baseline metrics.
-- What the student can immediately do for a lab.
-- Links to reliability analysis and paper notes.
+- [ ] 整理仓库结构。
+- [ ] 给 README 加 GIF 和 result table。
+- [ ] 更新一页 CV。
+- [ ] 加具体数字：mAP、FPS、数据规模、ECE、Brier、AUROC。
 
-Tasks:
+验收：
 
-- [ ] Organize all files into the target structure.
-- [ ] Add GIF and result table to README.
-- [ ] Update one-page CV.
-- [ ] Add concrete numbers: mAP, FPS, data scale, ECE, Brier, AUROC.
+- [ ] README 第一屏有图和数字。
+- [ ] CV 有强的 3D perception reliability 项目经历。
 
-Acceptance:
+## 第 7 阶段：第 8 周，精准套磁
 
-- [ ] README first screen has visuals and numbers.
-- [ ] CV has a strong 3D perception reliability project entry.
+目标：发 20 封精准 research email，不群发。
 
-## Stage 7: Week 8, Targeted Outreach
+优先目标：
 
-Goal: send 20 precise research emails, not generic mass email.
+- [ ] XMUM AI faculty：Dr. Goh、Prof. Zhang、Dr. Ashwaq、Dr. Hakim、Dr. Chua、Dr. Shaidah。
+- [ ] Shanghai AI Lab / OpenDriveLab。
+- [ ] Shenzhen IDEA。
+- [ ] Tsinghua MARS Lab 博士生。
+- [ ] SJTU MVIG Lab 博士生。
+- [ ] BAAI。
+- [ ] NTU AutoDriving Lab。
+- [ ] A*STAR。
+- [ ] HKUST / HKU CV groups。
 
-Priority targets:
+邮件规则：
 
-- [ ] XMUM AI faculty: Dr. Goh, Prof. Zhang, Dr. Ashwaq, Dr. Hakim, Dr. Chua, Dr. Shaidah.
-- [ ] Shanghai AI Lab / OpenDriveLab.
-- [ ] Shenzhen IDEA.
-- [ ] Tsinghua MARS Lab PhD students.
-- [ ] SJTU MVIG Lab PhD students.
-- [ ] BAAI.
-- [ ] NTU AutoDriving Lab.
-- [ ] A*STAR.
-- [ ] HKUST / HKU CV groups.
+- [ ] 第一段必须提对方具体论文或项目。
+- [ ] 放 GitHub 和一页 CV。
+- [ ] 具体说明自己能干什么：baseline experiments、ablation、point-cloud data processing、failure analysis、reliability evaluation。
+- [ ] 7 天后礼貌 follow-up 一次。
 
-Email rule:
-
-- [ ] First paragraph must mention a specific paper or project by the recipient.
-- [ ] Include GitHub and one-page resume.
-- [ ] Keep the ask concrete: baseline experiments, ablation, point-cloud data processing, failure analysis, reliability evaluation.
-- [ ] Follow up once after 7 days.
-
-Tracking table:
+追踪表：
 
 | Target | Person | Paper / project hook | Date sent | Follow-up | Reply | Next action |
 |---|---|---|---|---|---|---|
 | XMUM | Dr. Goh Sim Kuan | NeuroMerging / AI4Brain |  |  |  |  |
 | XMUM | Prof. Zhang Yingqian | Reliable AI / CV / AI security |  |  |  |  |
 
-## Current Highest-Value Positioning
-
-Use this phrase when introducing the project:
+## 当前最佳自我介绍
 
 > I work on reliable 3D perception: OpenPCDet baselines, LiDAR detection evaluation, confidence calibration, risk-coverage analysis, and subgroup failure analysis.
 
-Do not describe the project only as autonomous driving. The broader bridge is:
+不要只说自己做 autonomous driving。更宽的桥是：
 
 > trustworthy AI, reliable perception, calibration, uncertainty, risk-aware evaluation, and real-world model failure analysis.
 
-## Immediate Next Actions
+## 眼前下一步
 
-- [ ] Create `docs/OpenPCDet_code_map.md`.
-- [ ] Create `docs/OpenPCDet_commands.md`.
-- [ ] Inspect existing AV2/WACV files to reuse prior results instead of duplicating work.
-- [ ] Extract current best baseline metrics from existing project artifacts.
-- [ ] Draft Dr. Goh outreach email after reading NeuroMerging abstract and project list.
+- [ ] 填 `docs/OpenPCDet_code_map.md`。
+- [ ] 填 `docs/OpenPCDet_commands.md`。
+- [ ] 从 WACV/AV2 论文仓库提取已存在的 baseline metrics。
+- [ ] 读 NeuroMerging 摘要后完善 Dr. Goh 邮件。
